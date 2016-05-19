@@ -20,7 +20,6 @@ module RailsFlatironStore
       g.test_framework  nil #to skip test framework
     end
 
-    config.action_controller.include_all_helpers = true
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

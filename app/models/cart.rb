@@ -16,6 +16,8 @@ class Cart < ActiveRecord::Base
 
   def checkout
     status = "submitted"
+    items.each {|item| item.inventory -= item.line_items.map {|line_item| line_item.quantity}.flatten.inject(:+)}
+    current_cart = nil
   end
 
 end
