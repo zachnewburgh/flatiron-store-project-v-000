@@ -14,4 +14,8 @@ class Cart < ActiveRecord::Base
     li
   end
 
+  def checkout
+    status = "submitted"
+  end
+
 end
