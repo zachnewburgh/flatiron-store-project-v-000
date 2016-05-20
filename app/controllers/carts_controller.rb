@@ -4,7 +4,9 @@ class CartsController < ApplicationController
   end
 
   def checkout
-    current_cart.checkout
+    @cart = current_cart
+    @cart.checkout
+    @cart.destroy
     redirect_to cart_path
   end
 
